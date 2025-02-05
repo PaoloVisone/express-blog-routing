@@ -1,3 +1,7 @@
+// IMPORTO EXSPRESS
+const express = require('express')
+const routers = express.Router();
+
 // CRUD
 // index
 routers.get('/posts', function (req, res) {
