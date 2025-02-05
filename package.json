@@ -1,0 +1,31 @@
+{
+  "name": "express-blog-routing",
+  "version": "1.0.0",
+  "description": "Esercizio routing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaoloVisone/express-blog-routing.git"
+  },
+  "keywords": [
+    "Esercizio",
+    "routing",
+    "routers",
+    "app",
+    "public"
+  ],
+  "author": "Paolo Visone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaoloVisone/express-blog-routing/issues"
+  },
+  "homepage": "https://github.com/PaoloVisone/express-blog-routing#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
