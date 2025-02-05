@@ -32,3 +32,6 @@ routers.patch('/posts/:id', function (req, res) {
 routers.delete('/posts/:id', function (req, res) {
     res.send('Eliminazione della ricetta' + req.params.id);
 });
+
+// ESPORTO IL ROUTER
+module.exports = routers;
