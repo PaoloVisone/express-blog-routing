@@ -1,37 +1,37 @@
 // IMPORTO EXSPRESS
 const express = require('express')
-const routers = express.Router();
+const router = express.Router();
 
 // CRUD
 // index
-routers.get('/posts', function (req, res) {
+router.get('/', function (req, res) {
     res.send('Lista di ricette');
 });
 
 // show
-routers.get('/posts/:id', function (req, res) {
+router.get('/:id', function (req, res) {
     res.send('Dettagli della ricetta' + req.params.id);
 });
 
 // store
-routers.post('/posts', function (req, res) {
+router.post('/', function (req, res) {
     res.send('Creazione nuova ricetta');
 });
 
 // update
-routers.put('/posts/:id', function (req, res) {
+router.put('/:id', function (req, res) {
     res.send('Modifica integrale della ricetta' + req.params.id);
 });
 
 // modify
-routers.patch('/posts/:id', function (req, res) {
+router.patch('/:id', function (req, res) {
     res.send('Modifica parziale della ricetta' + req.params.id);
 });
 
 // destroy
-routers.delete('/posts/:id', function (req, res) {
+router.delete('/:id', function (req, res) {
     res.send('Eliminazione della ricetta' + req.params.id);
 });
 
 // ESPORTO IL ROUTER
-module.exports = routers;
+module.exports = router;
