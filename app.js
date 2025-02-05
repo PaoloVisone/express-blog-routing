@@ -9,6 +9,9 @@ app.get("/", (req, res) => {
     res.send(`Hello world`);
 });
 
+// Indico ad express le nuove rotte
+app.use("/posts", ricetteRouter)
+
 app.listen(port, () => {
     console.log(`App attiva su http://localhost:${port}`);
 });
