@@ -2,15 +2,30 @@ const express = require("express");
 const app = express();
 const port = 3000;
 // Importo il router
-const ricetteRouter = require('./routers/posts');
+const postRouter = require('./routers/posts');
 
+// importo l'oggetto posts dal file data/posts.js
+const posts = require('./data/posts');
+
+// rotta index per visualizzare tutti i post
+app.get("/posts", (req, res) => {
+    res.send(posts);
+});
+// rotta show per visualizzare un post specifico
+app.get("/posts/:id", (req, res) => {
+    const id = req.params.id;
+    res.send(posts[id]);
+});
+
+// Indico ad express di usare la cartella public come cartella statica
 app.use(express.static('public'));
 app.get("/", (req, res) => {
     res.send(`Hello world`);
 });
 
 // Indico ad express le nuove rotte
-app.use("/posts", ricetteRouter)
+app.use("/posts", postRouter)
+
 
 app.listen(port, () => {
     console.log(`App attiva su http://localhost:${port}`);

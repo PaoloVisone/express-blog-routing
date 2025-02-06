@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 
 // show
 router.get('/:id', function (req, res) {
-    res.send('Dettagli del post' + req.params.id);
+    res.send('Dettagli del post ' + req.params.id);
 });
 
 // store
@@ -20,17 +20,17 @@ router.post('/', function (req, res) {
 
 // update
 router.put('/:id', function (req, res) {
-    res.send('Modifica integrale del post' + req.params.id);
+    res.send('Modifica integrale del post ' + req.params.id);
 });
 
 // modify
 router.patch('/:id', function (req, res) {
-    res.send('Modifica parziale del post' + req.params.id);
+    res.send('Modifica parziale del post ' + req.params.id);
 });
 
 // destroy
 router.delete('/:id', function (req, res) {
-    res.send('Eliminazione del post' + req.params.id);
+    res.send('Eliminazione del post ' + req.params.id);
 });
 
 // ESPORTO IL ROUTER
