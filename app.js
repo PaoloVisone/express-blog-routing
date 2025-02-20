@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
+
+// Importo "cors"
+const cors = require("cors");
+
 const port = 3000;
+
 // Importo il router
 const postRouter = require('./routers/posts');
 
@@ -25,6 +30,11 @@ app.get("/", (req, res) => {
 
 // Indico ad express le nuove rotte
 app.use("/posts", postRouter)
+
+// middleware per il CORS
+app.use(cors({
+    origin: 'http://localhost:5173'
+}));
 
 
 app.listen(port, () => {
